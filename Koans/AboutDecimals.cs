@@ -5,13 +5,14 @@ namespace DotNetCoreKoans.Koans
 {
     public class AboutDecimals : Koan
     {
+       
         [Step(1)]
         public void UnquotedNumbersEndingInMAreDecimals()
         {
             var d = 1m;
 
-            Assert.Equal(typeof(FillMeIn), d.GetType());
-        }
+            Assert.Equal(typeof(System.Decimal), d.GetType());
+        } 
 
         [Step(2)]
         public void DecimalsAndIntsCanPlayNice()
@@ -24,7 +25,7 @@ namespace DotNetCoreKoans.Koans
 
             var result = d + n;
             
-            Assert.Equal(FILL_ME_IN, result);
+            Assert.Equal(12.2m, result);
             
             // Notice that the result is a decimal when you do this
         }
